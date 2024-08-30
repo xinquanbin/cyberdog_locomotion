@@ -1,0 +1,4 @@
+struct rl_vae_action_lcmt {
+    float action[ 12 ];
+    int64_t timestamp;
+}

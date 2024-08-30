@@ -48,6 +48,7 @@ ControlFsm< T >::ControlFsm( Quadruped< T >* quadruped, StateEstimatorContainer<
 
     states_list_.rl_reset = new FsmStateRlReset< T >( &data );
     states_list_.rl_rapid = new FsmStateRlRapid< T >( &data );
+    states_list_.rl_vae_locomotion   = new FsmStateRlVaeLocomotion< T >( &data );
 
     safety_checker_ = new SafetyChecker< T >( &data );
 
@@ -539,6 +540,8 @@ template < typename T > FsmState< T >* ControlFsm< T >::GetNextState( FsmStateNa
     case FsmStateName::kRlRapid:
         return states_list_.rl_rapid;
 
+    case FsmStateName::kRlVaeLocomotion:
+        return states_list_.rl_vae_locomotion;
 
     default:
         return states_list_.invalid;

@@ -192,6 +192,8 @@ vel_xy_yaw_max_vision         : [0.5  , 0.3  , 1.0]
 vel_xy_yaw_min_vision         : [-0.5 , -0.3 , -1.0]
 vel_xy_yaw_max_pronk_rl       : [ 1.6 ,  1.0 ,  3.0]
 vel_xy_yaw_min_pronk_rl       : [-1.2 , -1.0 , -3.0]
+vel_xy_yaw_max_vae_rl         : [ 1.6 ,  1.0 ,  2.0]
+vel_xy_yaw_min_vae_rl         : [-1.6 , -1.0 , -2.0]
 vel_xy_yaw_max_rapid_rl       : [0 , 0 ,  7.0]
 vel_xy_yaw_min_rapid_rl       : [0 , 0 , -8.0]
 
@@ -204,6 +206,8 @@ acc_xy_yaw_max_bound  : [1.7  , 3.0   ,  3.0]
 acc_xy_yaw_min_bound  : [-2.0 , -3.0  , -3.0]
 acc_xy_yaw_max_pronk_rl : [ 1.5 ,  1.5 ,  2.5]
 acc_xy_yaw_min_pronk_rl : [-1.5 , -1.5 , -2.5]
+acc_xy_yaw_max_vae_rl   : [ 1.5 ,  1.5 ,  2.5]
+acc_xy_yaw_min_vae_rl   : [-1.5 , -1.5 , -2.5]
 acc_xy_yaw_max_rapid_rl : [0 , 0 ,  3.0]
 acc_xy_yaw_min_rapid_rl : [0 , 0 , -3.0]
 acc_xy_yaw_max_follow : [1.0  , 1.    ,  2.0]
@@ -221,6 +225,9 @@ y_offset_trot       : [0.04, -0.04, 0.04, -0.04]
 x_offset_pronk_rl   : -0.15
 y_offset_pronk_rl   : 0.05
 yaw_offset_pronk_rl : 0.25
+x_offset_vae_rl     : 0.0
+y_offset_vae_rl     : 0.0
+yaw_offset_vae_rl   : 0.0
 x_offset_rapid_rl   : -0.15
 y_offset_rapid_rl   : 0
 yaw_offset_rapid_rl : 0.15

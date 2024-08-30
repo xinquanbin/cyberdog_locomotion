@@ -1137,6 +1137,7 @@ template < typename T > FsmStateName FSMStateRecoveryStand< T >::CheckTransition
     case MotionMode::kLifted:
     case MotionMode::kRlReset:
     case MotionMode::kRlRapid:
+    case MotionMode::kRlVaeLocomotion:
         this->next_state_name_ = ( FsmStateName )cmd->mode;
         break;
 
@@ -1174,6 +1175,7 @@ template < typename T > TransitionData< T > FSMStateRecoveryStand< T >::Transiti
     case FsmStateName::kPoseCtrl:
     case FsmStateName::kQpStand:
     case FsmStateName::kLocomotion:
+    case FsmStateName::kRlVaeLocomotion:
         Run();
         if ( this->ready_for_switch_ == true )
             this->transition_data_.done = true;

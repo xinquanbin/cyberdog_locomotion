@@ -110,6 +110,9 @@ public:
           INIT_PARAMETER( vel_xy_yaw_max_pronk_rl ), INIT_PARAMETER( vel_xy_yaw_min_pronk_rl ), INIT_PARAMETER( acc_xy_yaw_max_pronk_rl ), INIT_PARAMETER( acc_xy_yaw_min_pronk_rl ),
           INIT_PARAMETER( x_offset_pronk_rl ), INIT_PARAMETER( y_offset_pronk_rl ), INIT_PARAMETER( yaw_offset_pronk_rl ),
 
+          INIT_PARAMETER( vel_xy_yaw_max_vae_rl ), INIT_PARAMETER( vel_xy_yaw_min_vae_rl ), INIT_PARAMETER( acc_xy_yaw_max_vae_rl ), INIT_PARAMETER( acc_xy_yaw_min_vae_rl ),
+          INIT_PARAMETER( x_offset_vae_rl ), INIT_PARAMETER( y_offset_vae_rl ), INIT_PARAMETER( yaw_offset_vae_rl ),
+
           INIT_PARAMETER( vel_xy_yaw_max_rapid_rl ), INIT_PARAMETER( vel_xy_yaw_min_rapid_rl ), INIT_PARAMETER( acc_xy_yaw_max_rapid_rl ), INIT_PARAMETER( acc_xy_yaw_min_rapid_rl ),
           INIT_PARAMETER( x_offset_rapid_rl ), INIT_PARAMETER( y_offset_rapid_rl ), INIT_PARAMETER( yaw_offset_rapid_rl ),
 
@@ -378,6 +381,14 @@ public:
     DECLARE_PARAMETER( double, x_offset_pronk_rl );
     DECLARE_PARAMETER( double, y_offset_pronk_rl );
     DECLARE_PARAMETER( double, yaw_offset_pronk_rl );
+
+    DECLARE_PARAMETER( Vec3< double >, vel_xy_yaw_max_vae_rl );
+    DECLARE_PARAMETER( Vec3< double >, vel_xy_yaw_min_vae_rl );
+    DECLARE_PARAMETER( Vec3< double >, acc_xy_yaw_max_vae_rl );
+    DECLARE_PARAMETER( Vec3< double >, acc_xy_yaw_min_vae_rl );
+    DECLARE_PARAMETER( double, x_offset_vae_rl );
+    DECLARE_PARAMETER( double, y_offset_vae_rl );
+    DECLARE_PARAMETER( double, yaw_offset_vae_rl );
 
     DECLARE_PARAMETER( Vec3< double >, vel_xy_yaw_max_rapid_rl );
     DECLARE_PARAMETER( Vec3< double >, vel_xy_yaw_min_rapid_rl );

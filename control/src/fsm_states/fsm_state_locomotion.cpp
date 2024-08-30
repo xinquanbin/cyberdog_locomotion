@@ -124,6 +124,7 @@ template < typename T > FsmStateName FsmStateLocomotion< T >::CheckTransition() 
         case MotionMode::kJump3d:
         case MotionMode::kRlReset:
         case MotionMode::kRlRapid:
+        case MotionMode::kRlVaeLocomotion:
             this->next_state_name_     = ( FsmStateName )cmd->mode;
             this->transition_duration_ = 0.;
             break;
@@ -171,6 +172,7 @@ template < typename T > TransitionData< T > FsmStateLocomotion< T >::Transition(
     case FsmStateName::kPureDamper:
     case FsmStateName::kRlReset:
     case FsmStateName::kRlRapid:
+    case FsmStateName::kRlVaeLocomotion:
         static const int kIterMpc   = 30 / ( 1000. * this->data_->control_parameters->controller_dt );
         static int       max_period = 10;
         if ( convex_switch_index_ != 1 )

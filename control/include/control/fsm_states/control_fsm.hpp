@@ -30,6 +30,7 @@
 // rl gait
 #include "fsm_states/fsm_state_rl_rapid.hpp"
 #include "fsm_states/fsm_state_rl_reset.hpp"
+#include "fsm_states/fsm_state_rl_vae_locomotion.hpp"
 
 /**
  * Enumerate all of the operating modes
@@ -58,6 +59,7 @@ template < typename T > struct FsmStateList {
     // rl gait
     FsmStateRlReset< T >* rl_reset;
     FsmStateRlRapid< T >* rl_rapid;
+    FsmStateRlVaeLocomotion< T >* rl_vae_locomotion;
 };
 
 /**

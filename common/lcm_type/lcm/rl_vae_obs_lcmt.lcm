@@ -1,0 +1,4 @@
+struct rl_vae_obs_lcmt {
+    float obs[ 45 ];
+    int64_t timestamp;
+}

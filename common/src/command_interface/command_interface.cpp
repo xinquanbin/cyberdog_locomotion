@@ -613,15 +613,17 @@ void CommandInterface::Rc2Cmd( const RobotType& robotType ) {
             switch ( right_tri_switch ) {
                 // cmd_cur_.mode = MotionMode::kLocomotion;
             case T8S_TRI_UP:
-                cmd_cur_.mode = MotionMode::kRecoveryStand;
-                // cmd_cur_.gait_id = GaitId::kTrotFast;
+                cmd_cur_.mode = MotionMode::kRlVaeLocomotion;
+                cmd_cur_.gait_id = 0;
                 break;
             case T8S_TRI_MIDDLE:
+                cmd_cur_.mode = MotionMode::kLocomotion;
                 cmd_cur_.gait_id = GaitId::kTrotMedium;
                 // // cmd_cur_.gait_id = GaitId::kTrot24v16;
                 // // cmd_cur_.gait_id = GaitId::kTrot20v12Follow;
                 break;
             case T8S_TRI_DOWN:
+                cmd_cur_.mode = MotionMode::kLocomotion;
                 cmd_cur_.gait_id = GaitId::kTrotSlow;  // For factory calibrate
                 // // cmd_cur_.gait_id = GaitId::kBound;
                 break;
@@ -832,7 +834,7 @@ void CommandInterface::Rc2Cmd( const RobotType& robotType ) {
     }
 
     // Get velocity & rpy cmd
-    if ( cmd_cur_.mode == MotionMode::kLocomotion || cmd_cur_.mode == MotionMode::kRlRapid ) {
+    if ( cmd_cur_.mode == MotionMode::kLocomotion || cmd_cur_.mode == MotionMode::kRlRapid || cmd_cur_.mode == MotionMode::kRlVaeLocomotion) {
         //  unify scale of rc and ui
         cmd_cur_.vel_des[ 0 ] = ApplyDeadband( 1. * rc_cmd_.right_stick_x, 0.1 );
         cmd_cur_.vel_des[ 1 ] = ApplyDeadband( -1. * rc_cmd_.right_stick_y, 0.1 );

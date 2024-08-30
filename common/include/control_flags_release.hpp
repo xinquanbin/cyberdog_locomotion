@@ -30,7 +30,8 @@
     X( kMotion = 62, "motion", 62 )                \
     X( kTwoLegStand = 64, "two leg stand", 64 )    \
     X( kRlReset = 80, "RL reset", 80 )             \
-    X( kRlRapid = 81, "RL rapid", 81 )
+    X( kRlRapid = 81, "RL rapid", 81 )             \
+    X( kRlVaeLocomotion = 83, "RL Vae locomotion", 83 )
 
 #define X( mode, name, num ) mode,
 enum MotionMode : int64_t { MOTION_MODE };
